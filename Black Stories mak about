@@ -1,0 +1,18 @@
+const victim = "John";
+const murderer = "Emily";
+const motive = "jealousy";
+const weapon = "poison";
+const location = "John's office";
+const alibi = "attending a business meeting out of town";
+
+const scenario1 = `Scenario 1: The police discovered that Emily had been in a relationship with John and that she had been jealous of his friendship with another woman. Emily had access to John's office and was seen entering and leaving the building around the time of the murder. The police found traces of poison in John's coffee mug. Emily denied any involvement and claimed to be ${alibi} at the time of the murder.`;
+
+const scenario2 = `Scenario 2: The police discovered that John had been involved in illegal activities, including fraud and embezzlement. Emily was his business partner and had recently discovered John's illegal activities. She had threatened to expose him to the authorities. The police found traces of poison in John's coffee mug. Emily denied any involvement and claimed to be ${alibi} at the time of the murder.`;
+
+const solution1 = `Solution 1: The police investigated further and found that Emily had purchased the poison from a nearby store. They also found evidence of her relationship with John and her jealousy towards his female friend. Emily was arrested and charged with murder.`;
+
+const solution2 = `Solution 2: The police investigated further and found evidence of John's illegal activities. They discovered that Emily had tried to persuade John to confess and turn himself in, but he had refused. Emily was cleared of any involvement, and John's death was ruled a suicide due to his involvement in illegal activities.`;
+
+console.log(`The body of ${victim} was discovered in his office, poisoned with a ${weapon}. The police identified ${murderer} as the prime suspect in the murder. Here are two possible scenarios and their solutions:\n`);
+console.log(`${scenario1}\n${solution1}\n`);
+console.log(`${scenario2}\n${solution2}\n`);
