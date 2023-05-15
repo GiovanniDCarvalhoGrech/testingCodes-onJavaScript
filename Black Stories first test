@@ -1,0 +1,64 @@
+const victims = [
+  { name: "John", age: 45, occupation: "CEO" },
+  { name: "Emily", age: 28, occupation: "Journalist" },
+  { name: "William", age: 52, occupation: "Lawyer" },
+  { name: "Sophie", age: 30, occupation: "Artist" },
+];
+
+const murderers = [
+  { name: "Jacob", age: 38, occupation: "Investment Banker" },
+  { name: "Olivia", age: 25, occupation: "Model" },
+  { name: "Ethan", age: 47, occupation: "Real Estate Agent" },
+  { name: "Ava", age: 32, occupation: "Chef" },
+];
+
+const motives = [
+  "revenge",
+  "jealousy",
+  "money",
+  "betrayal",
+  "accident",
+  "insanity",
+];
+
+const weapons = ["gun", "poison", "knife", "rope", "bat", "axe"];
+
+const locations = ["park", "office", "hotel", "beach", "mansion", "alley"];
+
+const alibis = [
+  "at home with family",
+  "at a business meeting",
+  "on vacation overseas",
+  "at a concert with friends",
+  "in a hospital for medical treatment",
+];
+
+const solutions = [
+  "The police discovered that the suspect had a history of violence and had been seen arguing with the victim earlier that day. They also found incriminating evidence at the suspect's home. The suspect was arrested and charged with murder.",
+  "The police received an anonymous tip that led them to the murder weapon, which was found in a dumpster near the crime scene. DNA evidence on the weapon linked the suspect to the murder. The suspect was arrested and charged with murder.",
+  "The police found video footage that showed the suspect entering and leaving the victim's apartment around the time of the murder. The suspect was arrested and charged with murder.",
+  "The police discovered that the suspect had been stalking the victim for some time and had a history of mental illness. They also found a journal at the suspect's home detailing plans to kill the victim. The suspect was arrested and charged with murder.",
+];
+
+function getRandomScenario() {
+  const victim = victims[Math.floor(Math.random() * victims.length)];
+  const murderer = murderers[Math.floor(Math.random() * murderers.length)];
+  const motive = motives[Math.floor(Math.random() * motives.length)];
+  const weapon = weapons[Math.floor(Math.random() * weapons.length)];
+  const location = locations[Math.floor(Math.random() * locations.length)];
+  const alibi = alibis[Math.floor(Math.random() * alibis.length)];
+
+  const scenario = `The body of ${victim.name}, a ${victim.age}-year-old ${victim.occupation}, was discovered at ${location}, with multiple injuries caused by a ${weapon}. The police identified ${murderer.name}, a ${murderer.age}-year-old ${murderer.occupation}, as the prime suspect in the murder. After investigating, the police discovered that the motive for the murder was ${motive}. ${murderer.name} claimed to be ${alibi} at the time of the murder, but the police found inconsistencies in their story.`;
+
+  const solution = solutions[Math.floor(Math.random() * solutions.length)];
+
+  return { scenario, solution };
+}
+
+function startGame() {
+  const { scenario, solution } = getRandomScenario();
+  console.log("Scenario: " + scenario);
+  console.log("Solution: " + solution);
+}
+
+startGame();
